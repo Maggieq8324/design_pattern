@@ -15,9 +15,17 @@ public class Test {
 //        coisini.studyPythonCourse();
 
         // v2 面向接口编程
-        Coisini coisini = new Coisini();
-        coisini.studyImoocCourse(new JavaCourse());
-        coisini.studyImoocCourse(new PythonCourse());
+//        Coisini coisini = new Coisini();
+//        coisini.studyImoocCourse(new JavaCourse());
+//        coisini.studyImoocCourse(new PythonCourse());
+
+        // v3 setter注入
+//        Coisini coisini = new Coisini();
+//        coisini.setiCourse(new JavaCourse());
+//        coisini.studyImoocCourse();
+//
+//        coisini.setiCourse(new PythonCourse());
+//        coisini.studyImoocCourse();
     }
 
 }

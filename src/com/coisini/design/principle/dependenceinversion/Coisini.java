@@ -8,7 +8,7 @@ package com.coisini.design.principle.dependenceinversion;
  */
 public class Coisini {
 
-    // 高层模块依赖底层模块
+    // v1 高层模块依赖底层模块
 //    public void studyJavaCourse() {
 //        System.out.println("在学习Java课程");
 //    }
@@ -17,11 +17,23 @@ public class Coisini {
 //        System.out.println("在学习Python课程");
 //    }
 
+    // v2 面向接口编程
+//    public void studyImoocCourse(ICourse iCourse) {
+//        iCourse.studyCourse();
+//    }
+
+
+    // v3 setter注入
+    private ICourse iCourse;
+
+    public void setiCourse(ICourse iCourse) {
+        this.iCourse = iCourse;
+    }
+
     /**
      * 学习课程
-     * @param iCourse
      */
-    public void studyImoocCourse(ICourse iCourse) {
+    public void studyImoocCourse() {
         iCourse.studyCourse();
     }
 
