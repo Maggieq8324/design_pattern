@@ -1,7 +1,7 @@
 package com.coisini.design.principle.singleresponsibility;
 
 /**
- * @Description 单一原则测试类
+ * @Description 单一职责原则测试类
  * @author coisini
  * @date Dec 6, 2021
  * @Version 1.0
