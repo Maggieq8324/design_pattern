@@ -20,7 +20,7 @@ public class Test {
         System.out.println("课程ID：" + javaCourse1.getId()+ " 课程名称：" + javaCourse1.getName()+ " 课程价格：" + javaCourse1.getPrice());
 
         JavaDiscountCourse javaCourse2 = (JavaDiscountCourse) javaCourse1;
-        System.out.println("课程ID：" + javaCourse2.getId()+ " 课程名称：" + javaCourse2.getName()+ " 课程原价：" + javaCourse2.getOriginPrice()+ " 课程折扣价：" + javaCourse2.getPrice());
+        System.out.println("课程ID：" + javaCourse2.getId()+ " 课程名称：" + javaCourse2.getName()+ " 课程原价：" + javaCourse2.getPrice() + " 课程折扣价：" + javaCourse2.getDiscountPrice());
 
     }
 

@@ -13,20 +13,11 @@ public class JavaDiscountCourse extends JavaCourse {
     }
 
     /**
-     * 原价
-     * @return
-     */
-    public Double getOriginPrice() {
-        return super.getPrice();
-    }
-
-    /**
-     * add 打折场景
      * 折扣价
      * @return
      */
-    @Override
-    public Double getPrice() {
+    public Double getDiscountPrice() {
         return super.getPrice() * 0.8;
     }
+
 }
