@@ -1,4 +1,4 @@
-package com.coisini.design.principle.liskovSubstitution;
+package com.coisini.design.principle.liskovsubstitution;
 
 /**
  * @Description 里氏替换原则测试类
@@ -8,6 +8,10 @@ package com.coisini.design.principle.liskovSubstitution;
  */
 public class Test {
 
+    /**
+     * 调整大小
+     * @param rectangle
+     */
     public static void resize(Rectangle rectangle) {
         while (rectangle.getWidth() <= rectangle.getLength()) {
             rectangle.setWidth(rectangle.getWidth() + 1);

@@ -1,4 +1,4 @@
-package com.coisini.design.principle.liskovSubstitution;
+package com.coisini.design.principle.liskovsubstitution;
 
 /**
  * @Description 正方形
