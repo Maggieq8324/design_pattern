@@ -6,12 +6,22 @@ package com.coisini.design.principle.liskovsubstitution;
  * @date Dec 15, 2021
  * @Version 1.0
  */
-public class Square extends Rectangle{
+public class Square implements Quadrangle {
 
     /**
      * 边长
      */
     private long sideLength;
+
+    @Override
+    public long getWidth() {
+        return sideLength;
+    }
+
+    @Override
+    public long getLength() {
+        return sideLength;
+    }
 
     public long getSideLength() {
         return sideLength;
@@ -19,25 +29,5 @@ public class Square extends Rectangle{
 
     public void setSideLength(long sideLength) {
         this.sideLength = sideLength;
-    }
-
-    @Override
-    public long getLength() {
-        return getSideLength();
-    }
-
-    @Override
-    public void setLength(long length) {
-        setSideLength(length);
-    }
-
-    @Override
-    public long getWidth() {
-        return getSideLength();
-    }
-
-    @Override
-    public void setWidth(long width) {
-        setSideLength(width);
     }
 }

@@ -28,10 +28,10 @@ public class Test {
 //        resize(rectangle);
 //    }
 
-    public static void main(String[] args) {
-        Square square = new Square();
-        square.setLength(10);
-        resize(square);
-    }
+//    public static void main(String[] args) {
+//        Square square = new Square();
+//        square.setLength(10);
+//        resize(square);
+//    }
 
 }
