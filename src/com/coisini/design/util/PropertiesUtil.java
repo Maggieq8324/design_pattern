@@ -65,6 +65,16 @@ public class PropertiesUtil {
                  "com.coisini.design.pattern.creational.factorymethod.v3.");
      }
 
+    /**
+     * 获取抽象工厂实例对象
+     * @return
+     */
+    public static Object getAbstractFactoryBean() {
+        return getBean("/com/coisini/design/util/config.properties",
+                "abstractFactory.className",
+                "com.coisini.design.pattern.creational.abstractfactory.v3.");
+    }
+
     public static void main(String[] args) {
         // 注意路径问题
         String className = getProperties("/com/coisini/design/util/config.properties", "factoryMethod.className");
