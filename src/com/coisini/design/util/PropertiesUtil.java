@@ -75,6 +75,16 @@ public class PropertiesUtil {
                 "com.coisini.design.pattern.creational.abstractfactory.v3.");
     }
 
+    /**
+     * 获取建造者模式实例对象
+     * @return
+     */
+    public static Object getBuilderPatternBean() {
+        return getBean("/com/coisini/design/util/config.properties",
+                "builderPattern.className",
+                "com.coisini.design.pattern.creational.builder.v2.");
+    }
+
     public static void main(String[] args) {
         // 注意路径问题
         String className = getProperties("/com/coisini/design/util/config.properties", "factoryMethod.className");
