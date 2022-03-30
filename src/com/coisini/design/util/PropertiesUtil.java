@@ -2,7 +2,8 @@ package com.coisini.design.util;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @Description Properties工具类
@@ -56,6 +57,25 @@ public class PropertiesUtil {
      }
 
     /**
+     * 根据配置文件提取类名返回实例对象集合
+     * @param filePath
+     * @param keyWord
+     * @param packagePath
+     * @return
+     */
+    private static List<Object> getBeans(String filePath, String keyWord, String packagePath) {
+        String[] classNames = getProperties(filePath, keyWord).split(",");
+        return Arrays.stream(classNames).map(className -> {
+            try {
+                return Class.forName(packagePath + className).newInstance();
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        }).filter(Objects::nonNull).collect(Collectors.toList());
+    }
+
+    /**
      * 获取工厂方法实例对象
      * @return
      */
@@ -83,6 +103,16 @@ public class PropertiesUtil {
         return getBean("/com/coisini/design/util/config.properties",
                 "builderPattern.className",
                 "com.coisini.design.pattern.creational.builder.v2.");
+    }
+
+    /**
+     * 获取外观模式实例对象
+     * @return
+     */
+    public static List<Object> getFacadePatternBeans() {
+        return getBeans("/com/coisini/design/util/config.properties",
+                "facadePattern.classNames",
+                "com.coisini.design.pattern.structural.facade.own.v2.");
     }
 
     public static void main(String[] args) {
