@@ -106,13 +106,23 @@ public class PropertiesUtil {
     }
 
     /**
-     * 获取外观模式实例对象
+     * 获取外观模式实例对象集合
      * @return
      */
     public static List<Object> getFacadePatternBeans() {
         return getBeans("/com/coisini/design/util/config.properties",
                 "facadePattern.classNames",
                 "com.coisini.design.pattern.structural.facade.own.v2.");
+    }
+
+    /**
+     * 获取外观模式实例对象
+     * @return
+     */
+    public static Object getFacadePatternBean() {
+        return getBean("/com/coisini/design/util/config.properties",
+                "facadePattern.className",
+                "com.coisini.design.pattern.structural.facade.own.v3.");
     }
 
     public static void main(String[] args) {
